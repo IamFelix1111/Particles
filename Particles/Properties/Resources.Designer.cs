@@ -59,5 +59,25 @@ namespace Particles.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        public static byte[] Particles_HTML {
+            get {
+                object obj = ResourceManager.GetObject("Particles_HTML", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        public static byte[] Particles_JS {
+            get {
+                object obj = ResourceManager.GetObject("Particles_JS", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
