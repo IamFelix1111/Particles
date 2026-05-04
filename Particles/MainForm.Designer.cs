@@ -39,6 +39,7 @@
             this.webView2.DefaultBackgroundColor = System.Drawing.Color.White;
             this.webView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webView2.Location = new System.Drawing.Point(0, 0);
+            this.webView2.Margin = new System.Windows.Forms.Padding(0);
             this.webView2.Name = "webView2";
             this.webView2.Size = new System.Drawing.Size(800, 450);
             this.webView2.TabIndex = 0;
@@ -48,10 +49,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.webView2);
+            this.ForeColor = System.Drawing.Color.White;
+            this.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.Name = "MainForm";
             this.Text = "Particles";
+            this.Activated += new System.EventHandler(this.MainForm_Activated);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.webView2)).EndInit();
             this.ResumeLayout(false);
@@ -60,6 +66,6 @@
 
         #endregion
 
-        private Microsoft.Web.WebView2.WinForms.WebView2 webView2;
+        internal Microsoft.Web.WebView2.WinForms.WebView2 webView2;
     }
 }

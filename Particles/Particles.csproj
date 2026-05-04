@@ -62,6 +62,7 @@
     <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.3912.50, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3912.50\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -83,6 +84,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertyForm.Designer.cs">
+      <DependentUpon>PropertyForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PropertyForm.resx">
+      <DependentUpon>PropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="replacehtml.ps1" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,10 +134,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Particles.css" />
     <Content Include="Particles.html" />
-    <Content Include="particles.min.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Particles.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Web.WebView2.1.0.3912.50\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.3912.50\build\Microsoft.Web.WebView2.targets')" />
@@ -136,4 +146,15 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.3912.50\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.3912.50\build\Microsoft.Web.WebView2.targets'))" />
   </Target>
+  <PropertyGroup>
+    <PreBuildEvent>cd $(ProjectDir)
+minify Particles.js -o particles.min.js
+minify Particles.css -o particles.min.css
+powershell -ExecutionPolicy Bypass -File replacehtml.ps1 | minify --type text/html -o particles.min.html</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>cd $(ProjectDir)
+del particles.min.js
+del particles.min.css</PostBuildEvent>
+  </PropertyGroup>
 </Project>

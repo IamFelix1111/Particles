@@ -22,5 +22,36 @@ namespace Particles.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("{\r\n  \"particles\": {\r\n    \"number\": { \"value\": 125 },\r\n    \"color\": { \"value\": \"#1" +
+            "07C10\" },\r\n    \"shape\": { \"type\": \"circle\" },\r\n    \"opacity\": {\r\n      \"value\": " +
+            "0.9,\r\n      \"random\": true,\r\n      \"anim\": {\r\n        \"enable\": true,\r\n        \"" +
+            "speed\": 1,\r\n        \"opacity_min\": 0.5,\r\n        \"sync\": false\r\n      }\r\n    },\r" +
+            "\n    \"size\": {\r\n      \"value\": 3,\r\n      \"random\": true,\r\n      \"anim\": {\r\n     " +
+            "   \"enable\": true,\r\n        \"speed\": 2,\r\n        \"size_min\": 1,\r\n        \"sync\":" +
+            " false\r\n      }\r\n    },\r\n    \"line_linked\": {\r\n      \"enable\": true,\r\n      \"dis" +
+            "tance\": 125,\r\n      \"color\": \"#10A010\",\r\n      \"opacity\": 0.8,\r\n      \"width\": 2" +
+            "\r\n    },\r\n    \"move\": {\r\n      \"enable\": true,\r\n      \"speed\": 1.5,\r\n      \"dire" +
+            "ction\": \"none\",\r\n      \"random\": false,\r\n      \"straight\": false,\r\n      \"out_mo" +
+            "de\": \"out\",\r\n      \"attract\": { \"enable\": false }\r\n    }\r\n  },\r\n  \"interactivity" +
+            "\": {\r\n    \"detect_on\": \"canvas\",\r\n    \"events\": {\r\n      \"onhover\": {\r\n        \"" +
+            "enable\": true,\r\n        \"mode\": \"grab,bubble\"\r\n      },\r\n      \"onclick\": {\r\n   " +
+            "     \"enable\": true,\r\n        \"mode\": \"repulse\"\r\n      },\r\n      \"resize\": true\r" +
+            "\n    },\r\n    \"modes\": {\r\n      \"grab\": {\r\n        \"distance\": 150,\r\n        \"lin" +
+            "e_linked\": { \"opacity\": 0.8 }\r\n      },\r\n      \"bubble\": {\r\n        \"distance\": " +
+            "200,\r\n        \"size\": 5,\r\n        \"duration\": 2,\r\n        \"opacity\": 0.8\r\n      " +
+            "},\r\n      \"repulse\": {\r\n        \"distance\": 150,\r\n        \"duration\": 0.8\r\n     " +
+            " },\r\n      \"push\": { \"particles_nb\": 4 },\r\n      \"remove\": { \"particles_nb\": 4 }" +
+            "\r\n    }\r\n  },\r\n  \"retina_detect\": true\r\n}")]
+        public string Particles_JSON {
+            get {
+                return ((string)(this["Particles_JSON"]));
+            }
+            set {
+                this["Particles_JSON"] = value;
+            }
+        }
     }
 }

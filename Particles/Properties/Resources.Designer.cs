@@ -61,6 +61,60 @@ namespace Particles.Properties {
         }
         
         /// <summary>
+        ///   查找类似 确定 的本地化字符串。
+        /// </summary>
+        public static string Accept {
+            get {
+                return ResourceManager.GetString("Accept", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 应用 的本地化字符串。
+        /// </summary>
+        public static string Apply {
+            get {
+                return ResourceManager.GetString("Apply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 取消 的本地化字符串。
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 开发者选项 的本地化字符串。
+        /// </summary>
+        public static string Dev {
+            get {
+                return ResourceManager.GetString("Dev", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 属性(&amp;P) 的本地化字符串。
+        /// </summary>
+        public static string Menu_Property {
+            get {
+                return ResourceManager.GetString("Menu_Property", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 打开开发者工具 的本地化字符串。
+        /// </summary>
+        public static string Open_Dev {
+            get {
+                return ResourceManager.GetString("Open_Dev", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找 System.Byte[] 类型的本地化资源。
         /// </summary>
         public static byte[] Particles_HTML {
@@ -71,12 +125,11 @@ namespace Particles.Properties {
         }
         
         /// <summary>
-        ///   查找 System.Byte[] 类型的本地化资源。
+        ///   查找类似 属性 的本地化字符串。
         /// </summary>
-        public static byte[] Particles_JS {
+        public static string Property {
             get {
-                object obj = ResourceManager.GetObject("Particles_JS", resourceCulture);
-                return ((byte[])(obj));
+                return ResourceManager.GetString("Property", resourceCulture);
             }
         }
     }

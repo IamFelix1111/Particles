@@ -1,5 +1,84 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Particles.Properties" GeneratedClassName="Settings">
   <Profiles />
-  <Settings />
+  <Settings>
+    <Setting Name="Particles_JSON" Type="System.String" Scope="User">
+      <Value Profile="(Default)">{
+  "particles": {
+    "number": { "value": 125 },
+    "color": { "value": "#107C10" },
+    "shape": { "type": "circle" },
+    "opacity": {
+      "value": 0.9,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 1,
+        "opacity_min": 0.5,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 2,
+        "size_min": 1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 125,
+      "color": "#10A010",
+      "opacity": 0.8,
+      "width": 2
+    },
+    "move": {
+      "enable": true,
+      "speed": 1.5,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "attract": { "enable": false }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab,bubble"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 150,
+        "line_linked": { "opacity": 0.8 }
+      },
+      "bubble": {
+        "distance": 200,
+        "size": 5,
+        "duration": 2,
+        "opacity": 0.8
+      },
+      "repulse": {
+        "distance": 150,
+        "duration": 0.8
+      },
+      "push": { "particles_nb": 4 },
+      "remove": { "particles_nb": 4 }
+    }
+  },
+  "retina_detect": true
+}</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

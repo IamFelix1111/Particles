@@ -117,11 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Accept" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>应用</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Dev" xml:space="preserve">
+    <value>开发者选项</value>
+  </data>
+  <data name="Menu_Property" xml:space="preserve">
+    <value>属性(&amp;P)</value>
+  </data>
+  <data name="Open_Dev" xml:space="preserve">
+    <value>打开开发者工具</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Particles_HTML" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Particles.html;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\particles.min.html;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Particles_JS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\particles.min.js;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Property" xml:space="preserve">
+    <value>属性</value>
   </data>
 </root>
